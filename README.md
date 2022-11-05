@@ -1,2 +1,2 @@
-# AMPTemplates-temp
-My AMP Templates that have not been added to the main template release by CubeCoders yet. 
+# GKuba-AMPTemplates
+My AMP Templates that haven't been added to the main template release by CubeCoders yet.
