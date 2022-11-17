@@ -7,6 +7,12 @@
     "UpdateSourceVersion": "{{Stream}}"
   },
   {
+    "UpdateStageName":"Create Mod Directory",
+    "UpdateSourcePlatform":"All",
+    "UpdateSource":"CreateDirectory",
+    "UpdateSourceArgs":"{{$FullBaseDir}}Mods"
+  },
+  {
     "UpdateStageName": "Settings File Download",
     "UpdateSourcePlatform": "All",
     "UpdateSource": "FetchURL",
@@ -76,7 +82,7 @@
     "UpdateStageName": "Settings File Download",
     "UpdateSourcePlatform": "All",
     "UpdateSource": "FetchURL",
-    "UpdateSourceData": "https://github.com/gkuba/AMPTemplates/raw/main/seven-days-settings-undead-legacy-stable.xml",
+    "UpdateSourceData": "https://github.com/CubeCoders/AMPTemplates/raw/main/seven-days-settings-undead-legacy-stable.xml",
     "UpdateSourceTarget": "./294420",
     "OverwriteExistingFiles": false,
     "UpdateSourceConditionSetting": "ConfigFile",
@@ -86,7 +92,7 @@
     "UpdateStageName": "Settings File Download",
     "UpdateSourcePlatform": "All",
     "UpdateSource": "FetchURL",
-    "UpdateSourceData": "https://github.com/gkuba/AMPTemplates/raw/main/seven-days-settings-undead-legacy-experimental.xml",
+    "UpdateSourceData": "https://github.com/CubeCoders/AMPTemplates/raw/main/seven-days-settings-undead-legacy-experimental.xml",
     "UpdateSourceTarget": "./294420",
     "OverwriteExistingFiles": false,
     "UpdateSourceConditionSetting": "ConfigFile",
@@ -123,7 +129,7 @@
     "UpdateSourcePlatform": "Windows",
     "UpdateSource": "Executable",
     "UpdateSourceData": "cmd.exe",
-    "UpdateSourceArgs": "/C move seven-days-to-die\\294420\\UndeadLegacyExperimental* seven-days-to-die\\294420\\UndeadLegacyExperimental && xcopy /E /Y /I seven-days-to-die\\294420\\UndeadLegacyExperimental\\* seven-days-to-die\\294420\\ && rmdir /Q /S seven-days-to-die\\294420\\UndeadLegacyExperimental",
+    "UpdateSourceArgs": "/C move seven-days-to-die\\294420\\UndeadLegacyStable* seven-days-to-die\\294420\\UndeadLegacyStable && xcopy /E /Y /I seven-days-to-die\\294420\\UndeadLegacyStable\\* seven-days-to-die\\294420\\ && rmdir /Q /S seven-days-to-die\\294420\\UndeadLegacyStable",
     "UpdateSourceConditionSetting": "ConfigFile",
     "UpdateSourceConditionValue": "seven-days-settings-undead-legacy-stable"
   },
