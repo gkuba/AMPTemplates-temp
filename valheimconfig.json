@@ -22,7 +22,7 @@
   },
   {
     "DisplayName": "Server Password",
-    "Description": "Password that clients must supply in order to connect.\n# NOTE: Minimum password length is 5 characters & Password cant be in the server name.\nDefault Password: 12345",
+    "Description": "Password that clients must supply in order to connect. NOTE: Minimum password length is 5 characters & Password cant be in the server name. Default Password: 12345",
     "FieldName": "ServerPassword",
     "InputType": "password",
     "Category": "Valheim General Settings",
