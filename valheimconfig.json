@@ -115,7 +115,7 @@
   {
     "DisplayName":"Please Read!",
     "Category":"Valheim Plus Settings",
-    "Description":"This is a placeholder",
+    "Description":"This is a placeholder I'm still looking into adding all the Valheim Plus settings soon.",
     "Keywords":"Read,Please,Info",
     "FieldName":"PleaseRead",
     "InputType":"hidden"
