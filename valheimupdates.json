@@ -27,5 +27,19 @@
     "UpdateSourceConditionValue": "true",
     "UnzipUpdateSource": true,
     "OverwriteExistingFiles": true
-  }
+  },
+  {
+    "UpdateStageName": "Update Saves Directory",
+    "UpdateSourcePlatform": "Windows",
+    "UpdateSource": "Executable",
+    "UpdateSourceData": "cmd.exe",
+    "UpdateSourceArgs": "/C move Data Saves",
+  },
+  {
+    "UpdateStageName": "Undead Legacy Stable Copy",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "Executable",
+    "UpdateSourceData": "/bin/bash",
+    "UpdateSourceArgs": "-c \"mv Data/ Saves/",
+  },
 ]
