@@ -11,14 +11,14 @@
     "UpdateSourcePlatform": "Windows",
     "UpdateSource": "Executable",
     "UpdateSourceData": "cmd.exe",
-    "UpdateSourceArgs": "/C move Data Saves"
+    "UpdateSourceArgs": "/C move {{$FullBaseDir}}\\Data {{$FullBaseDir}}\\Saves"
   },
   {
     "UpdateStageName": "Update Saves Directory - Linux",
     "UpdateSourcePlatform": "Linux",
     "UpdateSource": "Executable",
     "UpdateSourceData": "/bin/bash",
-    "UpdateSourceArgs": "-c \"mv ./Data/ ./Saves/\""
+    "UpdateSourceArgs": "-c \"mv {{$FullBaseDir}}/Data/ {{$FullBaseDir}}/Saves/\""
   },
   {
     "UpdateStageName": "Fetch ValheimPlus from Github - Windows",
