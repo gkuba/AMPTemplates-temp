@@ -40,6 +40,6 @@
     "UpdateSourcePlatform": "Linux",
     "UpdateSource": "Executable",
     "UpdateSourceData": "/bin/bash",
-    "UpdateSourceArgs": "-c \"mv Data/ Saves/"
+    "UpdateSourceArgs": "-c \"mv Data/ Saves/\""
   },
 ]
