@@ -7,6 +7,20 @@
     "UpdateSourceVersion": "{{Stream}}"
   },
   {
+    "UpdateStageName": "Update Saves Directory - Windows",
+    "UpdateSourcePlatform": "Windows",
+    "UpdateSource": "Executable",
+    "UpdateSourceData": "cmd.exe",
+    "UpdateSourceArgs": "/C move Data Saves"
+  },
+  {
+    "UpdateStageName": "Update Saves Directory - Linux",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "Executable",
+    "UpdateSourceData": "/bin/bash",
+    "UpdateSourceArgs": "-c \"mv ./Data/ ./Saves/\""
+  },
+  {
     "UpdateStageName": "Fetch ValheimPlus from Github - Windows",
     "UpdateSourcePlatform": "Windows",
     "UpdateSource": "GithubRelease",
@@ -27,19 +41,5 @@
     "UpdateSourceConditionValue": "true",
     "UnzipUpdateSource": true,
     "OverwriteExistingFiles": true
-  },
-  {
-    "UpdateStageName": "Update Saves Directory - Windows",
-    "UpdateSourcePlatform": "Windows",
-    "UpdateSource": "Executable",
-    "UpdateSourceData": "cmd.exe",
-    "UpdateSourceArgs": "/C move Data Saves"
-  },
-  {
-    "UpdateStageName": "Update Saves Directory - Linux",
-    "UpdateSourcePlatform": "Linux",
-    "UpdateSource": "Executable",
-    "UpdateSourceData": "/bin/bash",
-    "UpdateSourceArgs": "-c \"mv ./Data/ ./Saves/\""
-  },
+  }
 ]
