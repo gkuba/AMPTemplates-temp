@@ -29,17 +29,17 @@
     "OverwriteExistingFiles": true
   },
   {
-    "UpdateStageName": "Update Saves Directory",
+    "UpdateStageName": "Update Saves Directory - Windows",
     "UpdateSourcePlatform": "Windows",
     "UpdateSource": "Executable",
     "UpdateSourceData": "cmd.exe",
     "UpdateSourceArgs": "/C move Data Saves"
   },
   {
-    "UpdateStageName": "Undead Legacy Stable Copy",
+    "UpdateStageName": "Update Saves Directory - Linux",
     "UpdateSourcePlatform": "Linux",
     "UpdateSource": "Executable",
     "UpdateSourceData": "/bin/bash",
-    "UpdateSourceArgs": "-c \"mv Data/ Saves/\""
+    "UpdateSourceArgs": "-c \"mv ./Data/ ./Saves/\""
   },
 ]
