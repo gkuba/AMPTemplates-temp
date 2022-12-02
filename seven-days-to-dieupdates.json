@@ -161,7 +161,10 @@
     "UpdateSourceData": "https://gitlab.com/KhaineGB/darkness-falls-a20/-/archive/main/darkness-falls-a20-main.zip",
     "UpdateSourceArgs":"darkness-falls-a20-main.zip",
     "UpdateSourceTarget":"{{$FullBaseDir}}",
+    "UnzipUpdateSource": true,
+    "OverwriteExistingFiles": true,
     "UpdateSourceConditionSetting": "DarknessFalls",
-    "UpdateSourceConditionValue": "true"
+    "UpdateSourceConditionValue": "true",
+    "DeleteAfterExtract": true
   }
 ]
