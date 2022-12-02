@@ -1156,7 +1156,7 @@
         "DisplayName":"Install Darkness Falls",
         "Category":"SteamCMD and Updates",
         "Description":"Auto-installs Darkness Falls when the server is updated.",
-        "Keywords":"install,'Darkness Falls'",
+        "Keywords":"install,DarknessFalls",
         "FieldName":"DarknessFalls",
         "InputType":"checkbox",
         "IsFlagArgument":false,

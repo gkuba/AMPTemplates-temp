@@ -162,5 +162,5 @@
     "UpdateSourceTarget":"{{$FullBaseDir}}",
     "UpdateSourceConditionSetting": "DarknessFalls",
     "UpdateSourceConditionValue": "true"
-}
+  }
 ]
