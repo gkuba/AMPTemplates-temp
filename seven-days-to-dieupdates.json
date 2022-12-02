@@ -155,10 +155,11 @@
     "UpdateSourceConditionValue": "seven-days-settings-undead-legacy-experimental"
   },
   {
-    "UpdateStageName":"Clone Darkness Falls GitHub Repo",
+    "UpdateStageName":"Download Darkness Falls",
     "UpdateSourcePlatform":"All",
-    "UpdateSource":"GitRepo",
-    "UpdateSourceData":"https://gitlab.com/KhaineGB/darkness-falls-a20.git",
+    "UpdateSource": "FetchURL",
+    "UpdateSourceData": "https://gitlab.com/KhaineGB/darkness-falls-a20/-/archive/main/darkness-falls-a20-main.zip",
+    "UpdateSourceArgs":"darkness-falls-a20-main.zip",
     "UpdateSourceTarget":"{{$FullBaseDir}}",
     "UpdateSourceConditionSetting": "DarknessFalls",
     "UpdateSourceConditionValue": "true"
