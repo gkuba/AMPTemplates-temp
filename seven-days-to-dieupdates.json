@@ -153,5 +153,14 @@
     "UpdateSourceArgs": "-c \"cp -rf ./seven-days-to-die/294420/UndeadLegacyExperimental*/* ./seven-days-to-die/294420/ && rm -rf ./seven-days-to-die/294420/UndeadLegacyExperimental*/\"",
     "UpdateSourceConditionSetting": "ConfigFile",
     "UpdateSourceConditionValue": "seven-days-settings-undead-legacy-experimental"
-  }
+  },
+  {
+    "UpdateStageName":"Clone Darkness Falls GitHub Repo",
+    "UpdateSourcePlatform":"All",
+    "UpdateSource":"GitRepo",
+    "UpdateSourceData":"https://gitlab.com/KhaineGB/darkness-falls-a20.git",
+    "UpdateSourceTarget":"{{$FullBaseDir}}",
+    "UpdateSourceConditionSetting": "DarknessFalls",
+    "UpdateSourceConditionValue": "true"
+}
 ]
