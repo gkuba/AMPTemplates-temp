@@ -3436,19 +3436,6 @@
     "EnumValues":{},
     "Suffix": "players"
   },{
-    "DisplayName":"Max Player Count Test",
-    "Category":"Valheim Plus - Server Settings",
-    "Description":"Maximum Concurrent Players on the server.",
-    "Keywords":"Server,Max,Player,Count",
-    "FieldName":"maxPlayers",
-    "InputType":"number",
-    "IsFlagArgument":false,
-    "ParamFieldName":"maxPlayers",
-    "IncludeInCommandLine":false,
-    "DefaultValue":"4",
-    "EnumValues":{},
-    "Suffix": "players"
-  },{
     "DisplayName":"Disable Server Password",
     "Category":"Valheim Plus - Server Settings",
     "Description":"Removes the requirement to have a server password.",
