@@ -69,7 +69,7 @@
     "UpdateSourcePlatform": "All",
     "UpdateSource": "FetchURL",
     "UpdateSourceData": "https://raw.githubusercontent.com/valheimPlus/ValheimPlus/development/valheim_plus.cfg",
-    "UpdateSourceTarget": "./BepInEx/config",
+    "UpdateSourceTarget": "{{$FullBaseDir}}/BepInEx/config",
     "OverwriteExistingFiles": false,
     "UpdateSourceConditionSetting": "valheim_plus_install",
     "UpdateSourceConditionValue": "true"
