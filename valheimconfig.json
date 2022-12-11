@@ -3427,7 +3427,7 @@
     "Category":"Valheim Plus - Server Settings",
     "Description":"Maximum Concurrent Players on the server.",
     "Keywords":"Server,Max,Player,Count",
-    "FieldName":"maxPlayers",
+    "FieldName":"Server.maxPlayers",
     "InputType":"number",
     "IsFlagArgument":false,
     "ParamFieldName":"Server.maxPlayers",
