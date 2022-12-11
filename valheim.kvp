@@ -26,7 +26,6 @@ App.ApplicationPort1=2456
 App.ApplicationPort2=2457
 App.ApplicationPort3=0
 App.RemoteAdminPort=0
-App.MaxUsers=10
 App.UseRandomAdminPassword=False
 App.RemoteAdminPassword=Password123
 App.AdminMethod=STDIO
