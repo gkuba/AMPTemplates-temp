@@ -63,5 +63,26 @@
     "UpdateSourceConditionValue": "true",
     "UnzipUpdateSource": true,
     "OverwriteExistingFiles": true
-  }
+  },
+  {
+    "UpdateStageName":"Start Server",
+    "UpdateSourcePlatform":"All",
+    "UpdateSource":"StartApplication",
+    "UpdateSourceConditionSetting": "valheim_plus_install",
+    "UpdateSourceConditionValue": "true"
+  },
+  {
+    "UpdateStageName":"Wait For Server Start",
+    "UpdateSourcePlatform":"All",
+    "UpdateSource":"WaitForStartupComplete",
+    "UpdateSourceConditionSetting": "valheim_plus_install",
+    "UpdateSourceConditionValue": "true"
+  },
+  {
+    "UpdateStageName":"Stop Server",
+    "UpdateSourcePlatform":"All",
+    "UpdateSource":"ShutdownApplication",
+    "UpdateSourceConditionSetting": "valheim_plus_install",
+    "UpdateSourceConditionValue": "true"
+  } 
 ]
