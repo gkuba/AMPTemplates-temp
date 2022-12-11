@@ -65,24 +65,13 @@
     "OverwriteExistingFiles": true
   },
   {
-    "UpdateStageName":"Start Server",
-    "UpdateSourcePlatform":"All",
-    "UpdateSource":"StartApplication",
+    "UpdateStageName": "Settings File Download",
+    "UpdateSourcePlatform": "All",
+    "UpdateSource": "FetchURL",
+    "UpdateSourceData": "https://raw.githubusercontent.com/valheimPlus/ValheimPlus/development/valheim_plus.cfg",
+    "UpdateSourceTarget": "{{$FullBaseDir}}/BepInEx/config",
+    "OverwriteExistingFiles": false,
     "UpdateSourceConditionSetting": "valheim_plus_install",
     "UpdateSourceConditionValue": "true"
-  },
-  {
-    "UpdateStageName":"Wait For Server Start",
-    "UpdateSourcePlatform":"All",
-    "UpdateSource":"WaitForStartupComplete",
-    "UpdateSourceConditionSetting": "valheim_plus_install",
-    "UpdateSourceConditionValue": "true"
-  },
-  {
-    "UpdateStageName":"Stop Server",
-    "UpdateSourcePlatform":"All",
-    "UpdateSource":"ShutdownApplication",
-    "UpdateSourceConditionSetting": "valheim_plus_install",
-    "UpdateSourceConditionValue": "true"
-  } 
+  }
 ]
