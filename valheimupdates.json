@@ -28,7 +28,7 @@
     "UpdateSourceArgs":"$['latest']['download_url']",
     "UnzipUpdateSource":true,
     "OverwriteExistingFiles":true,
-    "DeleteAfterExtract":true
+    "DeleteAfterExtract":false
   },
   {
     "UpdateStageName": "BepInEx Copy",
