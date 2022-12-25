@@ -21,14 +21,34 @@
     "UpdateSourceArgs": "-c \"mv {{$FullBaseDir}}/Data/ {{$FullBaseDir}}/Saves/\""
   },
   {
-    "UpdateStageName":"Fetch BepInEx from Thunderstore",
-    "UpdateSourcePlatform":"All",
-    "UpdateSource":"FetchURLFromJQ",
-    "UpdateSourceData":"https://valheim.thunderstore.io/api/experimental/package/denikson/BepInExPack_Valheim/",
-    "UpdateSourceArgs":"$['latest']['download_url']",
-    "UnzipUpdateSource":false,
-    "OverwriteExistingFiles":true,
-    "DeleteAfterExtract":false
+    "UpdateStageName": "Fetch BepInEx from Thunderstore",
+    "UpdateSourcePlatform": "All",
+    "UpdateSource": "FetchURL",
+    "UpdateSourceData": "https://valheim.thunderstore.io/package/download/denikson/BepInExPack_Valheim/5.4.1901/",
+    "UpdateSourceArgs": "denikson-BepInExPack_Valheim-5.4.1901.zip",
+    "UpdateSourceConditionSetting": "bepinex_install",
+    "UpdateSourceConditionValue": "true",
+    "UnzipUpdateSource": true,
+    "OverwriteExistingFiles": true,
+    "DeleteAfterExtract": true
+  },
+  {
+    "UpdateStageName": "BepInEx Copy",
+    "UpdateSourcePlatform": "Windows",
+    "UpdateSource": "Executable",
+    "UpdateSourceData": "cmd.exe",
+    "UpdateSourceArgs": "/C move Valheim\\896660\\BepInExPack_Valheim Valheim\\896660\\UndeadLegacyStable && xcopy /E /Y /I Valheim\\896660\\BepInExPack_Valheim\\* Valheim\\896660\\ && rmdir /Q /S Valheim\\896660\\BepInExPack_Valheim",
+    "UpdateSourceConditionSetting": "bepinex_install",
+    "UpdateSourceConditionValue": "true"
+  },
+  {
+    "UpdateStageName": "BepInEx Copy",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "Executable",
+    "UpdateSourceData": "/bin/bash",
+    "UpdateSourceArgs": "-c \"cp -rf ./Valheim/896660/BepInExPack_Valheim/* ./Valheim/896660/ && rm -rf ./Valheim/896660/BepInExPack_Valheim/\"",
+    "UpdateSourceConditionSetting": "bepinex_install",
+    "UpdateSourceConditionValue": "true"
   },
   {
     "UpdateStageName": "Fetch ValheimPlus from Github - Windows",
