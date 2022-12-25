@@ -21,15 +21,14 @@
     "UpdateSourceArgs": "-c \"mv {{$FullBaseDir}}/Data/ {{$FullBaseDir}}/Saves/\""
   },
   {
-    "UpdateStageName": "Fetch BepInEx from Thunderstore",
-    "UpdateSourcePlatform": "All",
-    "UpdateSource": "FetchURL",
-    "UpdateSourceData": "https://valheim.thunderstore.io/package/download/denikson/BepInExPack_Valheim/5.4.1901/",
-    "UpdateSourceArgs": "denikson-BepInExPack_Valheim-5.4.1901.zip",
-    "UpdateSourceConditionSetting": "bepinex_install",
-    "UpdateSourceConditionValue": "true",
-    "UnzipUpdateSource": true,
-    "OverwriteExistingFiles": true
+    "UpdateStageName":"Fetch BepInEx from Thunderstore",
+    "UpdateSourcePlatform":"All",
+    "UpdateSource":"FetchURLFromJQ",
+    "UpdateSourceData":"https://valheim.thunderstore.io/api/experimental/package/denikson/BepInExPack_Valheim/",
+    "UpdateSourceArgs":"$['latest']['download_url']",
+    "UnzipUpdateSource":true,
+    "OverwriteExistingFiles":true,
+    "DeleteAfterExtract":true
   },
   {
     "UpdateStageName": "BepInEx Copy",
