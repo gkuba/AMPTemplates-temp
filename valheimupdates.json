@@ -25,6 +25,7 @@
     "UpdateSourcePlatform": "All",
     "UpdateSource": "FetchURL",
     "UpdateSourceData": "https://valheim.thunderstore.io/package/download/denikson/BepInExPack_Valheim/5.4.1901/",
+    "UpdateSourceArgs": "denikson-BepInExPack_Valheim-5.4.1901.zip",
     "UpdateSourceConditionSetting": "bepinex_install",
     "UpdateSourceConditionValue": "true",
     "UnzipUpdateSource": true,
