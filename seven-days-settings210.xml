@@ -17,7 +17,7 @@
   <property name="Language" value="English" />
   <!-- Primary language for players on this server. Values: Use any language name that you would users expect to search for. Should be the English name of the language, e.g. not "Deutsch" but "German" -->
   <!-- Networking -->
-  <property name="ServerPort" value="26904" />
+  <property name="ServerPort" value="26900" />
   <!-- Port you want the server to listen on. Keep it in the ranges 26900 to 26905 or 27015 to 27020 if you want PCs on the same LAN to find it as a LAN server. -->
   <property name="ServerVisibility" value="2" />
   <!-- Visibility of this server: 2 = public, 1 = only shown to friends, 0 = not listed. As you are never friend of a dedicated server setting this to "1" will only work when the first player connects manually by IP. -->
@@ -37,15 +37,17 @@
   <property name="ServerAdminSlotsPermission" value="0" />
   <!-- Required permission level to use the admin slots above -->
   <!-- Admin interfaces -->
-  <property name="ControlPanelEnabled" value="false" />
-  <!-- Enable/Disable the web control panel -->
-  <property name="ControlPanelPort" value="26910" />
-  <!-- Port of the control panel webpage -->
-  <property name="ControlPanelPassword" value="CHANGEME" />
-  <!-- Password to gain entry to the control panel -->
+  <property name="WebDashboardEnabled" value="false"/>
+  <!-- Enable/disable the web dashboard -->
+  <property name="WebDashboardPort" value="8080"/>
+  <!-- Port of the web dashboard -->
+  <property name="WebDashboardUrl" value=""/>
+  <!-- External URL to the web dashboard if not just using the public IP of the server, e.g. if the web dashboard is behind a reverse proxy. Needs to be the full URL, like "https://domainOfReverseProxy.tld:1234/". Can be left empty if directly using the public IP and dashboard port -->
+  <property name="EnableMapRendering" value="false"/>
+  <!-- Enable/disable rendering of the map to tile images while exploring it. This is used e.g. by the web dashboard to display a view of the map. -->
   <property name="TelnetEnabled" value="true" />
   <!-- Enable/Disable the telnet -->
-  <property name="TelnetPort" value="27022" />
+  <property name="TelnetPort" value="8081" />
   <!-- Port of the telnet server -->
   <property name="TelnetPassword" value="Password123" />
   <!-- Password to gain entry to telnet interface. If no password is set the server will only listen on the local loopback interface -->
@@ -113,6 +115,8 @@
   <!-- Size (box "radius", so a box with 2 times the given value for each side's length) of bedroll deadzone, no zombies will spawn inside this area, and any cleared sleeper volumes that touch a bedroll deadzone will not spawn after they've been cleared. -->
   <property name="BedrollExpiryTime" value="45" />
   <!-- Number of real world days a bedroll stays active after owner was last online -->
+  <property name="AllowSpawnNearBackpack" value="false"/>
+  <!-- Allow players to respawn near their last dropped backpack when they die -->
   <!-- Performance related -->
   <property name="MaxSpawnedZombies" value="64" />
   <!-- This setting covers the entire map. There can only be this many zombies on the entire map at one time. Changing this setting has a huge impact on performance. -->
@@ -120,6 +124,8 @@
   <!-- If your server has a large number of players you can increase this limit to add more wildlife. Animals don't consume as much CPU as zombies. NOTE: That this doesn't cause more animals to spawn arbitrarily: The biome spawning system only spawns a certain number of animals in a given area, but if you have lots of players that are all spread out then you may be hitting the limit and can increase it. -->
   <property name="ServerMaxAllowedViewDistance" value="12" />
   <!-- Max viewdistance a client may request (6 - 12). High impact on memory usage and performance. -->
+  <property name="MaxQueuedMeshLayers" value="1000" />
+  <!-- Maximum amount of Chunk mesh layers that can be enqueued during mesh generation. Reducing this will improve memory usage but may increase Chunk generation time -->
   <!-- Zombie settings -->
   <property name="EnemySpawnMode" value="true" />
   <!-- Enable/Disable enemy spawning -->
@@ -150,7 +156,7 @@
   <!-- days in whole numbers -->
   <property name="AirDropFrequency" value="72" />
   <!-- How often airdrop occur in game-hours, 0 == never -->
-  <property name="AirDropMarker" value="false" />
+  <property name="AirDropMarker" value="true" />
   <!-- Sets if a marker is added to map/compass for air drops. -->
   <!-- Multiplayer -->
   <property name="PartySharedKillRange" value="100" />
@@ -158,7 +164,7 @@
   <property name="PlayerKillingMode" value="3" />
   <!-- Player Killing Settings (0 = No Killing, 1 = Kill Allies Only, 2 = Kill Strangers Only, 3 = Kill Everyone) -->
   <!-- Land claim options -->
-  <property name="LandClaimCount" value="1" />
+  <property name="LandClaimCount" value="3" />
   <!-- Maximum allowed land claims per player. -->
   <property name="LandClaimSize" value="41" />
   <!-- Size in blocks that is protected by a keystone -->
@@ -186,23 +192,11 @@
   <!-- Required permission level to use twitch integration on the server -->
   <property name="TwitchBloodMoonAllowed" value="false" />
   <!-- If the server allows twitch actions during a blood moon. This could cause server lag with extra zombies being spawned during blood moon. -->
+  <property name="MaxChunkAge" value="-1"/>
+  <!-- The number of in-game days which must pass since visiting a chunk before it will reset to its original state if not revisited or protected (e.g. by a land claim or bedroll being in close proximity). -->
+  <property name="SaveDataLimit" value="-1"/>
+  <!-- The maximum disk space allowance for each saved game in megabytes (MB). Saved chunks may be forceably reset to their original states to free up space when this limit is reached. Negative values disable the limit. -->
   <!-- There are several game settings that you cannot change when starting a new game.
-	You can use console commands to change at least some of them ingame.
-	setgamepref BedrollDeadZoneSize 30 -->
-  <!-- RecipeFilter: 0 - Shows all recipes 1 - Shows unknown recipes, search limited by workstation 2 - Shows only known and workstation relevant recipes -->
-  <property name="RecipeFilter" value="0"/>
-  <!-- StarterQuestEnabled: True or False - determines if you trigger the tutorial quest upon first spawning on the server -->
-  <property name="StarterQuestEnabled" value="true"/>
-  <!-- WanderingHordFrequency: After how many in-game hours a wandering horde would occur. On top of this value 1 to 4 additional hours may be added depending on spawn conditions. Minimum Value: 1 -->
-  <property name="WanderingHordeFrequency" value="16"/>
-  <!-- WanderingHordeRange: Additional random hours added to Wandering Horde Frequency to add randomness to hours between spawns. For example, Frequency: 5, Frequency RNG Range: 10, then wandering horde will spawn anywhere between 5 to 15 (5+10) in-game hours + additional hours if special conditions occur (No players alive, etc). -->
-  <property name="WanderingHordeRange" value="8"/>
-  <!-- WanderingHordeEnemyCount: Fixed zombie count, that will spawn in a Wandering horde. Minimum Value: 2. Zombies + Zombie RNG Range value must not exceed: 64 -->
-  <property name="WanderingHordeEnemyCount" value="10"/>
-  <!-- WanderingHordeEnemyRange: This value determines up to how many additional zombies can spawn for Wandering Horde. For example, Zombies: 5, Zombies RNG Range: 10, then wandering horde will spawn anywhere between 5 to 15 (5+10) zombies. Combined value must not exceed: 64 -->
-  <property name="WanderingHordeEnemyRange" value="10"/>
-  <!-- DeathPenalty: Sets what will be the consequences to your progression when you die in the game: 0 - No penalty (you will not get XP debt as well as no debuff, that lowers your Attributes) 1 - Beginner, near Death Trauma debuff (Vanilla like experience) 2 - Moderate, same as beginner, but also with loss of random Action skills 3 - Standard, same as moderate, but also you will respawn with partial health, food and water -->
-  <property name="DeathPenalty" value="3"/>
-  <!-- POITierLootScale: Multiplier determining how important a POI Tier is when scaling Loot Stage. 0% - Disabled (Default), 100% Vanilla Scaling. Acceptable values are integers from 0 to 100 -->
-  <property name="POITierLootScale" value="0"/>
+  You can use console commands to change at least some of them ingame.
+  setgamepref BedrollDeadZoneSize 30 -->
 </ServerSettings>
